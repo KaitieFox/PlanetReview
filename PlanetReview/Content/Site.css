@@ -1,6 +1,9 @@
 ﻿body {
+    font-family: 'Space Mono', monospace;
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color:black;
+    color:lightgrey;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +24,29 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+/*Site Index Jumbotrons*/
+/*Landing Page*/
+#home {
+    background-image: url('Pictures/bluefantasyplanet.jpg');
+    background-size:cover;
+    color: white;
+}
+/*Reviews Page*/
+#reviews {
+    background-image: url('Pictures/fantastyplanetwppl.jpg');
+    background-size:cover;
+    color: white;
+}
+/*Category Page*/
+#category {
+    background-image: url('Pictures/scifi.jpg');
+    background-size:cover;
+    color: white;
+}
+
+/*Buttons Adjust*/
+.clickable {
+    color:white;
 }

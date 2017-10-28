@@ -10,7 +10,7 @@ using PlanetReview.Models;
 
 namespace PlanetReview.Controllers
 {
-    public class ReviewssController : Controller
+    public class ReviewsController : Controller
     {
         private PlanetReviewContext db = new PlanetReviewContext();
 

@@ -4,11 +4,18 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@*The top of the page plus Create New Button*@
+<div class="jumbotron" id="category">
+    <h1>Rear View Planet</h1>
+    <p>reviews organized by planet</p>
+    <p>@Html.ActionLink("Add New RearView", "Create", new { @class = "btn btn-primary", role = "button" })
+</div>
 
-<p>
+@*<p>
     @Html.ActionLink("Create New", "Create")
-</p>
+</p>*@
+
+@*Display for Planets in thumbnail.*@
 @foreach (var item in Model)
 {
     <div class="row">

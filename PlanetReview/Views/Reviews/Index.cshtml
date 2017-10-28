@@ -4,13 +4,15 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@*The top of the page plus Create New Button*@
+<div class="jumbotron" id="reviews">
+    <h1>Rear View Planet</h1>
+    <p>reviews</p>
+    <p class="clickable">@Html.ActionLink("Add New RearView", "Create", new { @class = "btn btn-primary", role = "button" })
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 @foreach (var item in Model)
-{  
+{
     <div class="row">
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
@@ -26,7 +28,10 @@
         </div>
     </div>
 }
-@*<tr>
+
+
+@*<table class="table">
+    <tr>
         <th>
             @Html.DisplayNameFor(model => model.Category.PlanetName)
         </th>
@@ -43,31 +48,31 @@
             @Html.DisplayNameFor(model => model.Rating)
         </th>
         <th></th>
-    </tr>*@
+    </tr>
 
-@*@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category.PlanetName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Content)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PublishDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rating)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-                @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-            </td>
-        </tr>
-    }*@
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.PlanetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Content)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PublishDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rating)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
 
-
+</table>*@
