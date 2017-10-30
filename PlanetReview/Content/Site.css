@@ -26,20 +26,27 @@ textarea {
     max-width: 280px;
 }
 
-/*Site Index Jumbotrons*/
+/*Site Jumbotrons*/
 /*Landing Page*/
 #home {
     background-image: url('Pictures/bluefantasyplanet.jpg');
     background-size:cover;
     color: white;
 }
-/*Reviews Page*/
+/*Reviews Index*/
 #reviews {
     background-image: url('Pictures/fantastyplanetwppl.jpg');
     background-size:cover;
     color: white;
 }
-/*Category Page*/
+/*Reviews Details*/
+#reviewdetails
+{
+    background-image: url('Pictures/fantastyplanetwppl.jpg');
+    background-size:cover;
+    color: white;
+}
+/*Category Index*/
 #category {
     background-image: url('Pictures/scifi.jpg');
     background-size:cover;
@@ -50,3 +57,4 @@ textarea {
 .clickable {
     color:white;
 }
+

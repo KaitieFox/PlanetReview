@@ -55,6 +55,7 @@ namespace PlanetReview.Controllers
                 db.Reviews.Add(review);
                 db.SaveChanges();
                 return RedirectToAction("Index");
+
             }
 
             ViewBag.CategoryID = new SelectList(db.Categories, "ID", "PlanetName", review.CategoryID);

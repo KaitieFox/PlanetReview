@@ -11,68 +11,49 @@
     <p class="clickable">@Html.ActionLink("Add New RearView", "Create", new { @class = "btn btn-primary", role = "button" })
 </div>
 
-@foreach (var item in Model)
-{
-    <div class="row">
-        <div class="col-sm-6 col-md-4">
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4 col-lg-4">
             <div class="thumbnail">
-                <img src="" alt="">
-                <div class="caption">
+                @*This is space for a cycle-through image*@
+                <div class="caption" id="reviewcard">
                     <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
                     <h4>@Html.DisplayFor(modelItem => item.Category.PlanetName)</h4>
-                    <p>@Html.DisplayFor(modelItem => item.Rating)</p>
+                    <p>
+                        @if (item.Rating == 1)
+                        {
+                            <div><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+                        }
+                        else if (item.Rating == 2)
+                        {
+                            <div><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+                        }
+                        else if (item.Rating == 3)
+                        {
+                            <div><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+                        }
+                        else if (item.Rating == 4)
+                        {
+                            <div><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+                        }
+                        else if (item.Rating == 5)
+                        {
+                            <div><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
+                        }
+                        else
+                        {
+                            @Html.DisplayFor(modelItem => item.Rating)
+                        }
                     <p>@Html.DisplayFor(modelItem => item.PublishDate)</p>
-                    <p>@Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-primary", role = "button" })</p>
+                    <p>@Html.ActionLink("Read More", "Details", new { id = item.ID }, new { @class = "btn btn-primary", role = "button" })</p>
                 </div>
             </div>
         </div>
-    </div>
-}
+
+    }
+</div>
 
 
-@*<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Category.PlanetName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Content)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PublishDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Rating)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category.PlanetName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Content)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PublishDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Rating)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
 
-</table>*@

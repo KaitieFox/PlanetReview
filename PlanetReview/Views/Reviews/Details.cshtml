@@ -4,7 +4,12 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+@*The top of the page plus Create New Button*@
+<div class="jumbotron" id="reviewdetails">
+    <h1>A Closer Look</h1>
+    <p>the review in focus</p>
+    <p>@Html.ActionLink("Add New RearView", "Create", new { @class = "btn btn-primary", role = "button" })
+</div>
 
 <div>
     <h4>Review</h4>
