@@ -15,9 +15,10 @@
     @foreach (var item in Model)
     {
         <div class="col-sm-6 col-md-4 col-lg-4">
-            <div class="thumbnail">
-                @*This is space for a cycle-through image*@
-                <div class="caption" id="reviewcard">
+            <div class="thumbnail" id="reviewCardBody">
+                @*This is space for a cycle-through image. Presently I have a stable image.*@
+                <img src="~/Content/Pictures/hubble.jpg" alt="Hubble Telescope">
+                <div class="caption" id="reviewCardText">
                     <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
                     <h4>@Html.DisplayFor(modelItem => item.Category.PlanetName)</h4>
                     <p>

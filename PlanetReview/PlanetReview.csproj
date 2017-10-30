@@ -143,8 +143,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Pictures\bluefantasyplanet.jpg" />
+    <Content Include="Content\Pictures\dark-space-background-011.jpg" />
     <Content Include="Content\Pictures\fantastyplanetspace.jpg" />
     <Content Include="Content\Pictures\fantastyplanetwppl.jpg" />
+    <Content Include="Content\Pictures\hubble.jpg" />
+    <Content Include="Content\Pictures\milky.jpg" />
     <Content Include="Content\Pictures\scifi.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

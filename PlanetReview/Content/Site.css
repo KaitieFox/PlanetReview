@@ -2,8 +2,8 @@
     font-family: 'Space Mono', monospace;
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color:black;
-    color:lightgrey;
+    background-image: url('Pictures/dark-space-background-011.jpg');
+    color: lightgrey;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -57,4 +57,28 @@ textarea {
 .clickable {
     color:white;
 }
+.btn btn-default {
+    border-radius: 50%;
+}
 
+/*Review Bubbles in Details*/
+#details {
+    background-image: url('Pictures/hubble.jpg');
+    background-size:cover;    
+}
+#textdetails{
+    color: white;
+}
+
+/*Review Cards on Index*/
+#reviewCardBody{
+    background-color:black;
+}
+#reviewCardText{
+    color:white;
+}
+
+/*Navbar*/
+.navbar {
+    background-color:black;
+}

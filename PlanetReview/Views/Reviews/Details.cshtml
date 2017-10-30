@@ -11,8 +11,55 @@
     <p>@Html.ActionLink("Add New RearView", "Create", new { @class = "btn btn-primary", role = "button" })
 </div>
 
-<div>
-    <h4>Review</h4>
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="thumbnail" id="details">
+            @*This is space for a cycle-through image*@
+            <div class="caption" id="textdetails">
+                <h3>@Html.DisplayFor(model => model.Title)</h3>
+                <h4>@Html.DisplayFor(model => model.Category.PlanetName)</h4>
+                <p>
+                    @if (Model.Rating == 1)
+                    {
+                        <div><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+                    }
+                    else if (Model.Rating == 2)
+                    {
+                        <div><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+                    }
+                    else if (Model.Rating == 3)
+                    {
+                        <div><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+                    }
+                    else if (Model.Rating == 4)
+                    {
+                        <div><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+                    }
+                    else if (Model.Rating == 5)
+                    {
+                        <div><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
+                    }
+                    else
+                    {
+                        @Html.DisplayFor(model => model.Rating)
+                    }
+                <p>@Html.DisplayFor(model => model.PublishDate)</p>
+                <p>@Html.DisplayFor(model => model.Content)</p>
+               </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    @*<h4>Review</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -60,4 +107,4 @@
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
-</p>
+</p>*@

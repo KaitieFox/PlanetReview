@@ -15,6 +15,7 @@ namespace PlanetReview.Models
         public string Title { get; set; }
         [MaxLength(500)]
         public string Content { get; set; }
+        [Display(Name = "Published Date")]
         public DateTime PublishDate { get; set; }
         [Range(1, 5)]
         public int Rating { get; set; }
