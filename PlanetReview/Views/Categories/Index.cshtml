@@ -12,19 +12,21 @@
 </div>
 
 @*Display for Planets in thumbnail.*@
-@foreach (var item in Model)
-{
-    <div class="row">
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">            
-            <img src="~/Content/Pictures/hubble.jpg" alt="Hubble Telescope">
-            <div class="caption">
-                <h3>@Html.DisplayFor(modelItem => item.PlanetName)</h3>
-                <p>@Html.DisplayFor(modelItem => item.PlanetType)</p>
-                <p>@Html.ActionLink("Edit this Planet", "Edit", new { id = item.ID }, new { @class = "btn btn-primary", role = "button" })</p>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="~/Content/Pictures/scifi.jpg" alt="Fantastic Planets">
+                <div class="caption">
+                    <h3>@Html.DisplayFor(modelItem => item.PlanetName)</h3>
+                    <p>@Html.DisplayFor(modelItem => item.PlanetType)</p>
+                    <p>@Html.ActionLink("Review this Planet", "Create", "Reviews", new { id = item.ID }, new { @class = "btn btn-primary", role = "button" })</p>
+                </div>
             </div>
         </div>
-    </div>
+    }
 </div>
-}
+
+
 

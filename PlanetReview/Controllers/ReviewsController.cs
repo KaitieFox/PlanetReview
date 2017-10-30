@@ -10,7 +10,7 @@ using PlanetReview.Models;
 
 namespace PlanetReview.Controllers
 {
-    public class ReviewssController : Controller
+    public class ReviewsController : Controller
     {
         private PlanetReviewContext db = new PlanetReviewContext();
 
@@ -55,7 +55,6 @@ namespace PlanetReview.Controllers
                 db.Reviews.Add(review);
                 db.SaveChanges();
                 return RedirectToAction("Index");
-
             }
 
             ViewBag.CategoryID = new SelectList(db.Categories, "ID", "PlanetName", review.CategoryID);
